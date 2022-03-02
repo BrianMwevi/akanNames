@@ -35,7 +35,6 @@ const toggleDisplay = (e) => {
 	const section = e.target.classList[0].split("-")[0];
 	const toHide = document.querySelector(`.${section}`);
 	const nextSection = toHide.nextElementSibling;
-	console.log(nextSection);
 	toHide.classList.replace("show", "hide");
 	if (nextSection !== "null") {
 		nextSection.classList.replace("hide", "show");
@@ -44,17 +43,27 @@ const toggleDisplay = (e) => {
 	}
 };
 
-const validateDate = (e) => {
-	e.preventDefault();
+const validateDate = (submit) => {
+	submit.preventDefault();
 	const gender = document.querySelector("input[type=radio]:checked");
-	if (gender === null) return alert("You must select your gender");
+    if (gender === null) return alert("You must select your gender");
+    
 	const userDate = new FormData(akanForm).get("dateOfBirth");
 	const convertedDate = new Date(userDate);
 	const day = convertedDate.getDay();
-	if (day < 0 || day > 7) return alert("Wrong input of day");
+    if (day < 0 || day > 7) return alert("Wrong input of day");
+    
+	const month = convertedDate.getMonth();
 	if (month < 0 || month > 11) return alert("Wrong input of month");
-
-	console.log(akanNames[gender.value][days[day]]);
+	return userFeedback(akanNames[gender.value][days[day]], days[day]);
 };
+
 akanForm.addEventListener("submit", validateDate);
 getAkan.addEventListener("click", toggleDisplay);
+
+const userFeedback = (akanName, day) => {
+	document.querySelector(".akan-overlay").classList.replace("hide", "show");
+	document.querySelector(".name").innerText = akanName;
+	document.querySelector(".day").innerText = day;
+	return;
+};
