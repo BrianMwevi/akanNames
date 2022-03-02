@@ -30,6 +30,7 @@ const akanNames = {
 
 const getAkan = document.querySelector(".home-akane__btn");
 const akanForm = document.querySelector(".akan-form");
+const overlay = document.querySelector(".akan-overlay");
 
 const toggleDisplay = (e) => {
 	const section = e.target.classList[0].split("-")[0];
@@ -46,24 +47,31 @@ const toggleDisplay = (e) => {
 const validateDate = (submit) => {
 	submit.preventDefault();
 	const gender = document.querySelector("input[type=radio]:checked");
-    if (gender === null) return alert("You must select your gender");
-    
+	if (gender === null) return alert("You must select your gender");
+
 	const userDate = new FormData(akanForm).get("dateOfBirth");
 	const convertedDate = new Date(userDate);
 	const day = convertedDate.getDay();
-    if (day < 0 || day > 7) return alert("Wrong input of day");
-    
+	if (day < 0 || day > 7) return alert("Wrong input of day");
+
 	const month = convertedDate.getMonth();
 	if (month < 0 || month > 11) return alert("Wrong input of month");
 	return userFeedback(akanNames[gender.value][days[day]], days[day]);
 };
 
-akanForm.addEventListener("submit", validateDate);
-getAkan.addEventListener("click", toggleDisplay);
-
 const userFeedback = (akanName, day) => {
-	document.querySelector(".akan-overlay").classList.replace("hide", "show");
+	overlay.classList.replace("hide", "show");
 	document.querySelector(".name").innerText = akanName;
 	document.querySelector(".day").innerText = day;
 	return;
 };
+
+const removeOverlay = () => {
+	overlay.classList.replace("show", "hide");
+	document.querySelector(".akan").classList.replace("show", "hide");
+	document.querySelector(".home").classList.replace("hide", "show");
+	return akanForm.reset();
+};
+akanForm.addEventListener("submit", validateDate);
+getAkan.addEventListener("click", toggleDisplay);
+overlay.addEventListener("click", removeOverlay);
