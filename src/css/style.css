@@ -70,7 +70,7 @@
 /* Akan Form Styles Start */
 .akan {
 	position: relative;
-	background-color: cyan;
+	background-color: rgb(47, 141, 141);
 }
 
 .akan-content {
@@ -79,18 +79,42 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	box-shadow: 0 0 10px 2px #fff;
+	box-shadow: 0 0 3px rgb(255, 255, 255);
+    background-color: rgba(29, 187, 187, 0.288);
 }
 
 .akan-form .form-group {
-	margin: 1em 0 0;
+    margin: 1em 0 0;
 }
 
 .akan-form input {
-	margin: 0.7em 0;
+    margin: 0.7em 0;
 	padding: 0.7em;
 }
 .akan-form label {
-	font-size: 1.2em;
+    font-size: 1.2em;
+}
+
+.akan-overlay {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.856);
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.akan-overlay .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: aquamarine;
+    padding: 2.5em;
+    box-shadow: 0 1px 2px #fff;
+}
+
+.overlay-text > * {
+    margin: 1em 1em 2em;
+    text-align: center;
 }
 /* Akan Form Styles End */
