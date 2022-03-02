@@ -65,5 +65,32 @@
 	cursor: pointer;
 	box-shadow: 0 4px 5px -2px #000;
 }
-
 /* Landingpage Styles End */
+
+/* Akan Form Styles Start */
+.akan {
+	position: relative;
+	background-color: cyan;
+}
+
+.akan-content {
+	position: absolute;
+	padding: 2.5em;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 0 0 10px 2px #fff;
+}
+
+.akan-form .form-group {
+	margin: 1em 0 0;
+}
+
+.akan-form input {
+	margin: 0.7em 0;
+	padding: 0.7em;
+}
+.akan-form label {
+	font-size: 1.2em;
+}
+/* Akan Form Styles End */
