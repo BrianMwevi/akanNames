@@ -9,6 +9,7 @@
 	</head>
 	<body>
 		<main>
+			<!-- Homepage Section Start -->
 			<section class="home row show">
 				<div class="home-img">
 					<img src="./src/images/baby.png" alt="Baby images" />
@@ -22,9 +23,23 @@
 						names matching the 5 days of the week:
 					</p>
 					<ul class="akan-names"></ul>
-					<button class="btn get-akane">Get an Akan Name</button>
+					<button class="home-akane__btn btn">Get an Akan Name</button>
 				</div>
 			</section>
+			<!-- Homepage Section End -->
+
+			<!-- Akan Names Form Start -->
+			<section class="akan hide">
+                <div class="akan-heading">
+                    <h2>To Get Your Akan Name, Fill The Form</h2>
+                </div>
+                <form class="akan-form">
+                    <label>Date of Birth</label>
+                    <input type="date" name="dateOfBirth" required><br>
+                    <button class="akan-btn btn">Submit</button>
+                </form>
+            </section>
+			<!-- Akan Names Form End -->
 		</main>
 
 		<script src="src/js/script.js"></script>
