@@ -1,8 +1,12 @@
 /* General Styles Start */
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@200&family=Lobster&family=Montserrat:wght@200;400&family=Poppins:wght@100&family=Roboto:wght@100;300;400&display=swap");
+
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	overflow: hidden;
+	font-family: "Roboto", serif;
 }
 
 .show {
@@ -26,6 +30,50 @@
 	/* flex-basis: 50%; */
 }
 /* General Styles End */
+
+/* Alert Styling Start */
+.alert-container {
+	position: fixed;
+	height: 100vh;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.274);
+	z-index: 10;
+}
+
+.text-container {
+	position: relative;
+	left: 50%;
+	background-color: rgb(143, 68, 68);
+	height: 4em;
+	width: 40%;
+	border-radius: 4px;
+	transform: translate(-50%, 0);
+}
+
+.alert-text {
+	position: absolute;
+	left: 50%;
+	line-height: 4em;
+}
+.alert-close {
+	position: absolute;
+	width: fit-content;
+	right: 0;
+	margin: 0.2em 0.2em 0 0;
+	padding: 0.3em 0.62em;
+	border-radius: 50%;
+	font-weight: bold;
+	background-color: rgb(180, 80, 80);
+	color: #fff;
+	cursor: pointer;
+}
+
+.alert-close:hover {
+	background-color: rgb(252, 252, 252);
+	color: #000;
+}
+
+/* Alert Styling End */
 
 /* Landingpage Styles Start */
 
@@ -67,7 +115,6 @@
 
 /* Akan Form Styles Start */
 .akan {
-	position: relative;
 	background-color: rgb(47, 141, 141);
 }
 
@@ -78,41 +125,41 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	box-shadow: 0 0 3px rgb(255, 255, 255);
-    background-color: rgba(29, 187, 187, 0.288);
+	background-color: rgba(29, 187, 187, 0.288);
 }
 
 .akan-form .form-group {
-    margin: 1em 0 0;
+	margin: 1em 0 0;
 }
 
 .akan-form input {
-    margin: 0.7em 0;
+	margin: 0.7em 0;
 	padding: 0.7em;
 }
 .akan-form label {
-    font-size: 1.2em;
+	font-size: 1.2em;
 }
 
-.akan-overlay {
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.856);
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
+.overlay-content {
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.856);
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
 }
 
 .akan-overlay .overlay-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: aquamarine;
-    padding: 2.5em;
-    box-shadow: 0 1px 2px #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: aquamarine;
+	padding: 2.5em;
+	box-shadow: 0 1px 2px #fff;
 }
 
 .overlay-text > * {
-    margin: 1em 1em 2em;
-    text-align: center;
+	margin: 1em 1em 2em;
+	text-align: center;
 }
 /* Akan Form Styles End */
