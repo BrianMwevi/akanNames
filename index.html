@@ -5,82 +5,95 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Akan Names</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+			integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 		<link rel="stylesheet" href="src/css/style.css" />
 	</head>
 	<body>
-		<main>
-			<!-- Alert Box Start -->
-			<div class="alert-container">
-				<div class="text-container">
-					<p class="alert-text">Hell</p>
-					<p class="alert-close">x</p>
+		<!-- Alert Box Start -->
+		<div class="alert-container hide">
+			<div class="alert-overlay"></div>
+			<div class="text-container">
+				<p class="alert-close">x</p>
+				<p class="alert-text">Hello</p>
+			</div>
+		</div>
+		<!-- Alert Box End -->
+
+		<!-- Navbar Start -->
+		<header>
+			<div class="navbar">
+				<div class="brand">
+					<img src="./src/images/logo.png" width="175px" alt="Logo" />
+				</div>
+				<div class="icons">
+					<ul>
+						<li>
+							<a href="https://github.com/BrianMwevi" target="_blank"
+								><i class="fab fa-github-square"></i
+							></a>
+						</li>
+						<li>
+							<a href="#"><i class="fab fa-linkedin"></i></a>
+						</li>
+						<li>
+							<a href="#"><i class="fab fa-twitter-square"></i></a>
+						</li>
+					</ul>
 				</div>
 			</div>
-			<!-- Alert Box End -->
-			<!-- Homepage Section Start -->
-			<section class="home row show">
-				<div class="home-img">
-					<img src="./src/images/baby.png" alt="Baby images" />
-				</div>
-				<div class="home-text">
-					<h1>Akan Names</h1>
-					<p>
-						Often in Ghanian culture, children are given Akan names which
-						corresponds to the day of the week which they were born. Akan names
-						are usually the first name of the person. Below is a list of Akan
-						names matching the 5 days of the week:
-					</p>
-					<ul class="akan-names"></ul>
-					<button class="home-akane__btn btn">Get an Akan Name</button>
-				</div>
-			</section>
-			<!-- Homepage Section End -->
+		</header>
+		<!-- Navbar End -->
 
-			<!-- Akan Names Form Start -->
-			<section class="akan hide">
-				<div class="akan-content">
-					<div class="akan-heading">
-						<h2>To Get Your Akan Name, Fill The Form</h2>
-					</div>
-					<form class="akan-form">
-						<div class="form-group">
-							<label>Date of Birth</label><br />
-							<input type="date" id="date" name="dateOfBirth" required />
-						</div>
-						<div class="form-group">
-							<label
-								><input
-									type="radio"
-									name="gender"
-									value="male"
-								/>&nbsp;Male </label
-							><br />
-						</div>
-						<div class="form-group">
-							<label
-								><input
-									type="radio"
-									name="gender"
-									value="female"
-								/>&nbsp;Female </label
-							><br />
-						</div>
-						<br />
-						<button class="akan-btn btn">Submit</button>
-					</form>
+		<main>
+			<section class="home">
+				<div class="home-left">
+					<h1 class="home-title">Akan Names</h1>
+					<p class="description">
+						Often in Ghanian culture, children are given Akan names which
+						corresponds to the day of the week which they were born. It is
+						usually the first name of the child.
+					</p>
+					<p class="output">
+						Your Akan <br />Name Is: <span class="akan-name">"Fill Form"</span
+						><br />
+						<span class="message"
+							>You were born on
+							<span class="day birthday">"Find Out"</span></span
+						>
+					</p>
 				</div>
-				<div class="akan-overlay hide">
-					<div class="overlay-content hide"></div>
-					<div class="overlay-text">
-						<h2>What a cool Akan name!</h2>
-						<h3>
-							<strong class="name"></strong> name corresponds to people born on
-							<span class="day"></span>
-						</h3>
+				<div class="home-right">
+					<form>
+						<div class="form-group">
+							<label
+								>Enter Date of Birth <br />
+								<input type="date" name="date" required />
+							</label>
+						</div>
+						<div class="form-group gender">
+							Select Gender <br />
+							<label class="male">
+								<input type="radio" name="gender" value="male" />Male
+							</label>
+							<label class="female">
+								<input type="radio" name="gender" value="female" />Female
+							</label>
+						</div>
+						<button>Submit</button>
+					</form>
+					<div class="home-right__footer">
+						<p class="credits">
+							Made with Love || <span class="day">Brian Mwevi</span>
+						</p>
 					</div>
 				</div>
 			</section>
-			<!-- Akan Names Form End -->
 		</main>
 
 		<script src="src/js/script.js"></script>
