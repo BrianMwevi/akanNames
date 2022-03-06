@@ -1,8 +1,12 @@
 # akanNames
 
-akanNames is a web application that generates an Akan names for users. The user provides date of birth and gender through a user form and it displays the Akan name corresponding to the day of the week the user was born. Often in Ghanian culture, children are given Akan names which corresponds to the day of the week which they were born. Akan name is usually the first name.
+##### Description
 
-[![akan.png](https://i.postimg.cc/43V81PZm/Akan-Page.png)](https://postimg.cc/G4kSrpW8)
+akanNames is a web application that generates an Akan names for users. The user provides date of birth and gender through a user form and it displays the Akan name corresponding to the day of the week the user was born. Often in Ghanian culture, children are given Akan names which corresponds to the day of the week which they were born. Akan name is usually the first name.
+[Figma Design](<https://www.figma.com/proto/m0RhLSleOgRYA2CkFr0ImM/Portfolio(s)-(Community)?node-id=102%3A3&scaling=min-zoom&page-id=102%3A2>)
+
+[![landing.png](https://i.postimg.cc/43V81PZm/Akan-Page.png)](https://postimg.cc/G4kSrpW8)
+[![error.png](https://i.postimg.cc/Vkx4Zkq7/Akan-Page-1.png)](https://postimg.cc/MnYyvxrR)
 
 ## Technologies Used
 
