@@ -26,7 +26,7 @@ akanNames is a web application that generates an Akan names for users. The user 
    - INPUT: "User's Birthdate Entered"
    - INPUT: "User's Gender Entered"
    - OUTPUT: "Displays User's Akan Name According to Submitted Date and Gender"
-2. Displays an Error Message if Date Input Left Blank
+2. Displays an Error Message if Date Input is a future date
    - INPUT: "Future Dates"
    - OUTPUT: "Unborn person"
 3. Displays an Error Message if Gender Not Chosen
