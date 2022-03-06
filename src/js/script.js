@@ -33,6 +33,7 @@ const alertButton = document.querySelector(".alert-close");
 const overlay = document.querySelector(".alert-overlay");
 const alertOverlay = alertButton.parentNode.parentNode;
 
+// Display Form Errors
 const alertUser = (message) => {
 	document.querySelector(".alert-text").innerText = message;
 	alertOverlay.classList.replace("hide", "show");
@@ -40,7 +41,9 @@ const alertUser = (message) => {
 		e.key == "Escape" ? closeAlert() : false
 	);
 };
+const closeAlert = () => alertOverlay.classList.replace("show", "hide");
 
+// Validate Form
 const validateForm = (submit) => {
 	submit.preventDefault();
 	const birthDate = new Date(document.querySelector("input[type=date]").value);
@@ -48,6 +51,7 @@ const validateForm = (submit) => {
 	const gender = document.querySelector("input[name=gender]:checked");
 	if (gender === null) return alertUser("You must select your gender");
 	const day = days[birthDate.getDay()];
+	akanForm.reset();
 	return userFeedback(getAkanName(gender.value, day), day);
 };
 
@@ -55,10 +59,8 @@ const getAkanName = (gender, day) => akanNames[gender][day];
 
 const userFeedback = (akanName, day) => {
 	document.querySelector(".akan-name").innerText = akanName;
-	document.querySelector(".birthday").innerText = day;
+	return (document.querySelector(".birthday").innerText = day);
 };
-
-const closeAlert = () => alertOverlay.classList.replace("show", "hide");
 
 akanForm.addEventListener("submit", validateForm);
 overlay.addEventListener("click", closeAlert);
