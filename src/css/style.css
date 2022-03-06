@@ -9,12 +9,7 @@
 	font-family: "Poppins", serif;
 }
 body {
-	height: 100vh;
 	background-color: #110323;
-	/* background: linear-gradient(#110323ec, #110323), url(../images/fingerprint.png);
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: center center; */
 	color: #0ee6b7;
 }
 
@@ -25,6 +20,7 @@ body {
 }
 
 .hide {
+  height: 0;
 	opacity: 0;
 	visibility: hidden;
 	transition: opacity, height ease-out 0.3s;
@@ -47,7 +43,6 @@ body {
 	left: 50%;
 	height: 6em;
 	width: 40%;
-	/* background-color: #0ee6b7c0; */
 	background-color: #182138;
 	border-radius: 2px;
 	transform: translate(-50%, 0);
@@ -84,7 +79,6 @@ body {
 	box-shadow: 0 0 10px 1px #fff;
 	color: #000;
 }
-
 /* Alert Styling End */
 
 /* Header Start */
@@ -137,6 +131,7 @@ a:hover {
 	font-weight: bolder;
 	-webkit-text-fill-color: transparent;
 	-webkit-background-clip: text;
+	background-clip: text;
 	-webkit-text-stroke: 1.5px #0ee6b7;
 	margin: 40px 0;
 }
@@ -172,7 +167,7 @@ a:hover {
 form {
 	background-color: #1d033f36;
 	border-radius: 5px;
-	padding:80px 100px;
+	padding: 80px 100px;
 	font-size: 24px;
 	line-height: 24px;
 }
@@ -255,7 +250,6 @@ button:hover,
 }
 
 input[type="radio"] {
-	/* width: 100px; */
 	margin-right: 5px;
 }
 
