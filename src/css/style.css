@@ -9,7 +9,12 @@
 	font-family: "Poppins", serif;
 }
 body {
+	height: 100vh;
 	background-color: #110323;
+	/* background: linear-gradient(#110323ec, #110323), url(../images/fingerprint.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center center; */
 	color: #0ee6b7;
 }
 
@@ -34,27 +39,27 @@ body {
 	width: 100%;
 	top: 0;
 	left: 0;
-	background-color: rgba(0, 0, 0, 0.6);
+	background-color: rgba(41, 53, 82, 0.705);
 }
 
 .text-container {
 	position: absolute;
 	left: 50%;
-	height: 4em;
+	height: 5em;
 	width: 40%;
-	/* background-color: rgb(143, 68, 68); */
-	background-color: #0ee6b7c0;
+	/* background-color: #0ee6b7c0; */
+	background-color: #182138;
 	border-radius: 2px;
 	transform: translate(-50%, 0);
 	box-shadow: 0 0 4px #fff;
 }
 
 .alert-text {
-	line-height: 3em;
+	line-height: 4em;
 	text-align: center;
-	color: #fff;
+	color: #0ee6b7;
 	font-size: 20px;
-	text-shadow: 0 0 5px #000;
+	text-shadow: 0 0 2px #fff;
 	font-weight: bold;
 }
 .alert-close {
@@ -68,15 +73,16 @@ body {
 	margin: 0.2em;
 	border-radius: 50%;
 	font-weight: bold;
-	background-color: rgb(180, 80, 80);
-	color: #fff;
+	background-color: #0ee6b7;
+	box-shadow: 0 0 2px 1px #fff;
+	color: #000;
 	cursor: pointer;
 }
 
 .alert-close:hover {
 	background-color: rgb(252, 252, 252);
+	box-shadow: 0 0 10px 1px #fff;
 	color: #000;
-	box-shadow: 0 0 10px 1px #000;
 }
 
 /* Alert Styling End */
@@ -123,13 +129,14 @@ a:hover {
 	width: 50%;
 }
 
-.home-left h1,
+.home-title,
 .akan-name {
 	font-size: 72px;
 	line-height: 108px;
 	letter-spacing: 0.055em;
 	font-weight: bolder;
 	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
 	-webkit-text-stroke: 1.5px #0ee6b7;
 	margin: 40px 0;
 }
@@ -165,9 +172,18 @@ a:hover {
 form {
 	background-color: #1d033f36;
 	border-radius: 5px;
-	padding: 80px;
+	padding: 100px;
 	font-size: 24px;
 	line-height: 34px;
+}
+
+form .form-title {
+	font-size: 40px;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	line-height: 40px;
+	letter-spacing: 0.055em;
 }
 
 form .form-group {
@@ -209,7 +225,7 @@ input[type="date"]::before {
 	padding: 8px 15px;
 	border-radius: 4px;
 	border: 1px solid #27ee52;
-	font-size: 18px;
+	font-size: 16px;
 }
 
 .gender .male {
@@ -226,8 +242,16 @@ button {
 	color: #fff;
 	border: 1px solid #27ee52;
 	border-radius: 2px;
+	font-size: 16px;
 	font-weight: bolder;
 	cursor: pointer;
+}
+
+button:hover,
+.gender label:hover {
+	border: 1px solid #1f9da1;
+	background-color: #182138;
+	transition: all ease-in-out 0.2s;
 }
 
 input[type="radio"] {
