@@ -47,9 +47,10 @@ const closeAlert = () => alertOverlay.classList.replace("show", "hide");
 const validateForm = (submit) => {
 	submit.preventDefault();
 	const birthDate = new Date(document.querySelector("input[type=date]").value);
-	if (new Date() - birthDate < 0) return alertUser("Unborn person 🤦");
+	if (new Date() - birthDate < 0)
+		return alertUser("Future Date Error. Not born, yet!🤰");
 	const gender = document.querySelector("input[name=gender]:checked");
-	if (gender === null) return alertUser("You must select your gender");
+	if (gender === null) return alertUser("Please Select Your Gender");
 	const day = days[birthDate.getDay()];
 	akanForm.reset();
 	return userFeedback(getAkanName(gender.value, day), day);

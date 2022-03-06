@@ -45,7 +45,7 @@ body {
 .text-container {
 	position: absolute;
 	left: 50%;
-	height: 5em;
+	height: 6em;
 	width: 40%;
 	/* background-color: #0ee6b7c0; */
 	background-color: #182138;
@@ -58,8 +58,8 @@ body {
 	line-height: 4em;
 	text-align: center;
 	color: #0ee6b7;
-	font-size: 20px;
-	text-shadow: 0 0 2px #fff;
+	font-size: 24px;
+	text-shadow: 0 0 5px #000;
 	font-weight: bold;
 }
 .alert-close {
@@ -70,7 +70,7 @@ body {
 	text-align: center;
 	top: 0;
 	right: 0;
-	margin: 0.2em;
+	margin: 0.3em 0.5em;
 	border-radius: 50%;
 	font-weight: bold;
 	background-color: #0ee6b7;
