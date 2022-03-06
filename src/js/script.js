@@ -28,22 +28,25 @@ const akanNames = {
 	},
 };
 
-const akanPage = document.querySelector(".home-akane__btn");
-const akanForm = document.querySelector(".akan-form");
-const overlay = document.querySelector(".overlay-content");
+const akanForm = document.querySelector("form");
+const alertButton = document.querySelector(".alert-close");
+const overlay = document.querySelector(".alert-overlay");
+const alertOverlay = alertButton.parentNode.parentNode;
 
-const toggleDisplay = (e) => {
-	const home = e.target.parentNode.parentNode;
-	const akan = home.nextElementSibling.classList.replace("hide", "show");
-	return home.classList.replace("show", "hide");
+const alertUser = (message) => {
+	document.querySelector(".alert-text").innerText = message;
+	alertOverlay.classList.replace("hide", "show");
+	return document.addEventListener("keydown", (e) =>
+		e.key == "Escape" ? closeAlert() : false
+	);
 };
 
 const validateForm = (submit) => {
 	submit.preventDefault();
+	const birthDate = new Date(document.querySelector("input[type=date]").value);
+	if (new Date() - birthDate < 0) return alertUser("Unborn person 🤦");
 	const gender = document.querySelector("input[name=gender]:checked");
-	if (gender === null) return alert("You must select your gender");
-	const birthDate = new Date(document.getElementById("date").value);
-	if (new Date() - birthDate < 0) return alert("Not born, yet!😉");
+	if (gender === null) return alertUser("You must select your gender");
 	const day = days[birthDate.getDay()];
 	return userFeedback(getAkanName(gender.value, day), day);
 };
@@ -51,17 +54,12 @@ const validateForm = (submit) => {
 const getAkanName = (gender, day) => akanNames[gender][day];
 
 const userFeedback = (akanName, day) => {
-	document.querySelector(".name").innerText = akanName;
-	document.querySelector(".day").innerText = day;
-	// return overlay.classList.replace("hide", "show");
+	document.querySelector(".akan-name").innerText = akanName;
+	document.querySelector(".birthday").innerText = day;
 };
 
-const removeOverlay = () => {
-	// overlay.classList.replace("show", "hide");
-	// document.querySelector(".akan").classList.replace("show", "hide");
-	// document.querySelector(".home").classList.replace("hide", "show");
-	// return akanForm.reset();
-};
+const closeAlert = () => alertOverlay.classList.replace("show", "hide");
+
 akanForm.addEventListener("submit", validateForm);
-akanPage.addEventListener("click", toggleDisplay);
-overlay.addEventListener("click", removeOverlay);
+overlay.addEventListener("click", closeAlert);
+alertButton.addEventListener("click", closeAlert);
