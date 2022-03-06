@@ -91,7 +91,7 @@ body {
 header {
 	height: 100px;
 	line-height: 100px;
-	margin: 20px 180px 0 100px;
+	margin: 20px 150px 0 100px;
 }
 .navbar .brand {
 	float: left;
@@ -107,8 +107,8 @@ ul li {
 }
 
 ul li a {
-	font-size: 30px;
-	margin: 0 20px;
+	font-size: 50px;
+	margin: 0 35px;
 	color: #0ee6b7;
 }
 
@@ -172,9 +172,9 @@ a:hover {
 form {
 	background-color: #1d033f36;
 	border-radius: 5px;
-	padding: 100px;
+	padding:80px 100px;
 	font-size: 24px;
-	line-height: 34px;
+	line-height: 24px;
 }
 
 form .form-title {
