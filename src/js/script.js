@@ -1,12 +1,4 @@
-const days = [
-	"Sunday",
-	"Monday",
-	"Tuesday",
-	"Wednesday",
-	"Thursday",
-	"Friday",
-	"Saturday",
-];
+const days = ["Sun", "Mon", "Tues", "Wednes", "Thurs", "Fri", "Satur"];
 const akanNames = {
 	male: ["Kwadwo", "Kwasi", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"],
 	female: ["Adwoa", "Akosua", "Abenaa", "Akua", "Yaa", "Afua", "Ama"],
@@ -16,6 +8,7 @@ const akanForm = document.querySelector("form");
 const alertButton = document.querySelector(".alert-close");
 const overlay = document.querySelector(".alert-overlay");
 const alertOverlay = alertButton.parentNode.parentNode;
+const closeAlert = () => alertOverlay.classList.replace("show", "hide");
 
 // Display Form Errors
 const alertUser = (message) => {
@@ -25,7 +18,6 @@ const alertUser = (message) => {
 		e.key == "Escape" ? closeAlert() : false
 	);
 };
-const closeAlert = () => alertOverlay.classList.replace("show", "hide");
 
 // Validate Form
 const validateForm = (submit) => {
@@ -37,7 +29,7 @@ const validateForm = (submit) => {
 	if (gender === null) return alertUser("Please Select Your Gender");
 	akanForm.reset();
 	const day = date.getDay();
-	return userFeedback(getAkanName(gender.value, day), days[day]);
+	return userFeedback(getAkanName(gender.value, day), `${days[day]}day`);
 };
 const getAkanName = (gender, day) => akanNames[gender][day];
 
